@@ -1,23 +1,653 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  <!-- Schema.org 구조화 데이터 for Article and FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.example.com/post-cancer-insurance-guide"
+    },
+    "headline": "암진단 후 보험가입 가이드: 유병자 보험, 간편심사 보험 완벽 비교 (2026년 기준)",
+    "description": "암진단을 받은 후 보험가입이 고민이신가요? 2026년 최신 기준으로 유병자 보험과 간편심사 보험의 장점, 단점, 가입 조건, 예상 금액을 완벽하게 분석하여 최적의 선택을 돕는 전문 가이드입니다.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.example.com/images/main-article-image.png",
+      "width": 1200,
+      "height": 630
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "보험 전문가 집단"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "보험 전문가 집단",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.example.com/images/logo.png"
+      }
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01"
+  }
+  </script>
+
+  <!-- FAQPage Schema for improved snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Q: 암진단 후 보험 가입이 가능한가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A: 네, 가능합니다. 일반적인 보험 가입은 어렵지만, '유병자 보험'이나 '간편심사 보험'을 통해 가입할 수 있습니다. 특히 암 진단 후 일정 기간(5년)이 지나 완치 판정을 받았다면 가입 문턱이 낮아집니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Q: 유병자 보험과 간편심사 보험의 차이점은 무엇인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A: 두 보험 모두 건강상의 이유로 일반 보험 가입이 어려운 분들을 위한 상품입니다. 간편심사 보험은 고지 의무 항목이 적어 심사가 빠르지만, 유병자 보험은 조금 더 세분화된 고지항목을 통해 보험료를 차등 적용하는 경우가 많습니다. 본문에서 자세한 장단점을 비교해드립니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Q: 보험료는 일반 보험보다 얼마나 비싼가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A: 건강 이력이 있는 만큼 일반 보험보다는 보험료가 높게 책정될 수 있습니다. 하지만 최근에는 경쟁 심화로 인해 저렴한 상품도 많이 출시되고 있습니다. 2026년 기준으로 평균적인 예상 금액을 본문에서 확인하실 수 있습니다."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="canonical" href="https://www.example.com/post-cancer-insurance-guide">
+
+  <!-- Custom CSS for modern, high-quality design -->
+  <style>
+    :root {
+      --primary-color: #0078D7; /* Deep Blue */
+      --secondary-color: #F7F7F7; /* Light Gray */
+      --accent-color: #FF5722; /* Orange for CTA */
+      --text-color: #333;
+      --light-text-color: #666;
+      --border-color: #E0E0E0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      line-height: 1.8;
+      background-color: #fff;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #fff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      padding: 15px 0;
+      display: block;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--secondary-color);
+    }
+    section:last-child {
+      border-bottom: none;
+    }
+
+    /* Content Hierarchy */
+    h2 {
+      font-size: 2em;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 1.5em;
+      color: var(--text-color);
+      margin-top: 30px;
+      border-left: 5px solid var(--primary-color);
+      padding-left: 10px;
+    }
+    h4 {
+      font-size: 1.2em;
+      color: var(--light-text-color);
+      margin-top: 20px;
+    }
+
+    /* Specific Component Styling */
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      margin: 20px auto;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-button:hover {
+      background-color: #e64a19;
+      transform: translateY(-2px);
+    }
+
+    /* Form Styling */
+    .form-box {
+      background-color: #f9f9f9;
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .form-box label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-box input[type="text"],
+    .form-box input[type="tel"],
+    .form-box select,
+    .form-box textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1em;
+    }
+
+    /* Comparison Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9em;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    table tr:nth-child(even) {
+      background-color: #fefefe;
+    }
+
+    /* FAQ Styling */
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .faq-item h3 {
+      cursor: pointer;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+      border-left: none;
+      padding-left: 0;
+    }
+    .faq-item p {
+      margin-top: 0;
+      padding-left: 15px;
+      border-left: 2px solid var(--border-color);
+    }
+    
+    /* Naver Keyword Section */
+    .keyword-section {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .keyword-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      columns: 2; /* Two-column layout for readability */
+    }
+    .keyword-section li {
+      margin-bottom: 5px;
+    }
+
+    /* Trust Section */
+    .trust-section {
+      background-color: #fcfcfc;
+      border: 1px solid #eee;
+      padding: 25px;
+      border-radius: 10px;
+    }
+    .trust-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .trust-section li {
+      background: #e9f5ff;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    
+    /* Custom CSS for specific elements */
+    .box-info {
+      background-color: #f0f8ff;
+      border: 1px solid #b3d9ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .box-info strong {
+      color: var(--primary-color);
+    }
+    .graph-representation {
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>암진단 후 보험가입 가이드: 유병자 보험, 간편심사 보험 완벽 비교 (2026년 기준)</h1>
+      <p>암 생존자를 위한 전문 가이드: 가입 조건부터 예상 금액, 가입 팁까지</p>
+      <a href="#quote-form-top" class="cta-button">무료 견적 상담 신청</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#introduction">가이드 소개</a></li>
+        <li><a href="#eligibility">가입 조건</a></li>
+        <li><a href="#comparison">상품 비교</a></li>
+        <li><a href="#cost">예상 비용</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#contact">상담 신청</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="container">
+
+    <!-- Section 1: Introduction -->
+    <section id="introduction">
+      <h2>암진단 후 보험가입, 왜 어렵고 어떻게 해야 할까요?</h2>
+      <p>암이라는 진단을 받고 치료를 무사히 마친 후, 많은 분들이 겪는 고민 중 하나가 바로 <strong>보험 가입</strong>입니다. 일반적인 보험 상품은 암 진단 이력이 있는 경우 가입 심사가 매우 까다롭거나 거절되는 경우가 많습니다. 하지만 2026년 현재는 건강에 대한 인식이 높아지고 보험 상품이 다양해지면서 암 생존자(암 환자)를 위한 전문 상품인 <strong>'유병자 보험'</strong>, <strong>'간편심사 보험'</strong>이 활성화되었습니다. 이 가이드는 암진단 후 보험가입을 희망하는 분들을 위해 필수적인 정보만을 모았습니다. 암진단 후 보험가입 성공 노하우와 함께, <strong>2026년 최신 기준으로 상품의 장단점과 예상 금액</strong>을 자세히 살펴보겠습니다.</p>
+      
+      <h3>함께 많이 찾는 키워드 (Naver 자동완성 및 연관검색어 분석)</h3>
+      <div class="keyword-section">
+        <p>네이버 검색 이용자들이 '암진단 후 보험가입'과 관련하여 자주 검색하는 키워드를 분석하여, 이 문서가 다루는 핵심 주제를 정리했습니다.</p>
+        <ul>
+          <li><strong>암진단 후 보험가입</strong></li>
+          <li><strong>암환자 보험 가입</strong></li>
+          <li><strong>유병자 보험 순위</strong></li>
+          <li><strong>간편심사 보험 추천</strong></li>
+          <li>암보험 가입 거절 사유</li>
+          <li>고혈압 당뇨 암보험</li>
+          <li>뇌졸중 암보험 가입</li>
+          <li><strong>암보험 재가입 조건</strong></li>
+          <li><strong>갑상선암 완치 후 보험</strong></li>
+          <li>유병자 보험 장단점</li>
+          <li>간편심사 보험 차이점</li>
+          <li><strong>2026년 암보험 예상 금액</strong></li>
+          <li>저렴한 유병자 보험</li>
+          <li><strong>암보험 싼곳 추천</strong></li>
+          <li>암보험 내돈내산 후기</li>
+          <li>암보험 가입 나이 제한</li>
+          <li>재발암 보장 보험</li>
+          <li><strong>유병자 실비보험 가입 조건</strong></li>
+          <li>유병자 암보험 비교</li>
+          <li>암보험 가입 팁</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 2: Eligibility and Conditions -->
+    <section id="eligibility">
+      <h2>암진단 후 보험가입, 가입 조건과 고지 의무 완벽 정리</h2>
+      <p>가장 중요한 부분은 <strong>고지 의무(告知義務)</strong>입니다. 암 진단 이력이 있는 분들은 일반 보험 가입 시 '고지의무 위반'으로 인해 보험금 지급이 거절될 수 있습니다. 유병자 보험은 이러한 위험을 줄이기 위해 고지 항목을 간소화한 상품입니다. 보통 <strong>'325 고지'</strong>라는 기준이 가장 일반적이며, 이는 다음과 같습니다.</p>
+
+      <h3>"325 고지"란? (암진단 후 보험가입의 핵심 조건)</h3>
+      <div class="box-info">
+        <ul>
+          <li><strong>3:</strong> 최근 3개월 이내 의사로부터 입원, 수술, 추가 검사(재검사 포함) 필요 소견을 받았는지 여부</li>
+          <li><strong>2:</strong> 최근 2년 이내 입원, 수술을 받은 이력이 있는지 여부</li>
+          <li><strong>5:</strong> 최근 5년 이내 암, 협심증, 뇌졸중, 간경화, 신부전증 등 중대 질환 진단, 입원, 수술 이력이 있는지 여부</li>
+        </ul>
+        <p>※ 여기서 '암진단 후 5년 이내'라는 조건이 가장 중요합니다. 암 진단 후 5년이 지나면 유병자 보험 가입 시 이 조건에서 벗어날 수 있어 심사 기준이 매우 완화됩니다.</p>
+      </div>
+
+      <h4>암 진단 시기에 따른 가입 조건의 차이</h4>
+      <p><strong>갑상선암, 유방암 등 경계성 종양이나 초기 암 진단 후 5년이 지나지 않은 경우</strong>:</p>
+      <p>이 경우에도 가입 가능한 상품이 있습니다. 다만 '부담보'라고 하여 특정 암에 대한 보장을 제외하거나, 특정 부위(예: 갑상선)에 대한 보장을 제외하는 조건으로 가입이 진행될 수 있습니다. <strong>'5년 부담보'</strong> 조건으로 가입 후 5년이 지나면 부담보가 해제되는 상품도 있으니 전문가와 상담이 필요합니다.</p>
+
+      <h4>유병자 보험 vs. 간편심사 보험: 차이점 비교</h4>
+      <p>유병자 보험과 간편심사 보험은 명칭이 혼용되어 사용되지만, 상품에 따라 심사 기준에 차이가 있습니다. 간편심사 보험은 고지 의무 항목을 3개 미만으로 간소화한 상품이 많아 심사가 매우 빠릅니다. 유병자 보험은 조금 더 세분화된 고지항목을 통해 보험료를 차등 적용하는 경우가 많습니다.</p>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>일반 보험</th>
+            <th>유병자 보험 (간편심사 포함)</th>
+            <th>무해지환급형 유병자 보험</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>가입 심사</td>
+            <td>매우 까다로움 (암진단 후 가입 거의 불가)</td>
+            <td>간소화된 고지 항목 (325 고지 등) 적용</td>
+            <td>간소화된 고지 항목, 보험료 저렴</td>
+          </tr>
+          <tr>
+            <td>고지 의무</td>
+            <td>모든 병력 상세 고지 필요</td>
+            <td>3~5개 항목만 고지</td>
+            <td>3~5개 항목만 고지</td>
+          </tr>
+          <tr>
+            <td>보험료 수준</td>
+            <td>가장 저렴함</td>
+            <td>일반 보험 대비 높음</td>
+            <td>일반 유병자 보험 대비 저렴 (환급금 X)</td>
+          </tr>
+          <tr>
+            <td>중요 특징</td>
+            <td>건강한 사람만 가입 가능</td>
+            <td>암 생존자, 고혈압, 당뇨 환자 가입 가능</td>
+            <td>중도 해지 시 환급금 없음, 장기 유지 필요</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="#quote-form-top" class="cta-button">나에게 맞는 보험 찾기: 무료 견적 요청</a>
+    </section>
+
+    <!-- Section 3: Product Analysis and Comparison -->
+    <section id="comparison">
+      <h2>2026년 암진단 후 보험가입: 상품별 장점과 단점, 핵심 보장 내용 분석</h2>
+      <p>암진단 후 보험가입 시, 가장 중요한 것은 '재발암'에 대한 보장입니다. 암 경험자들은 재발의 위험을 항상 안고 있기 때문에, 재발암 보장 여부와 보장 금액을 꼼꼼히 따져봐야 합니다. 2026년 현재 시장에서 인기 있는 유병자 보험 상품들의 주요 특징을 분석합니다.</p>
+
+      <h3>핵심 보장 분석: 재발암/전이암 보장</h3>
+      <p>일반적인 암보험은 '최초 1회 진단비'를 지급하고 계약이 종료되는 경우가 많았습니다. 하지만 유병자 보험 상품 중에서는 <strong>'재발암 진단비'</strong> 또는 <strong>'전이암 진단비'</strong>를 보장하는 상품이 출시되고 있습니다. 특히, 2차암 진단비(원발암과 다른 암)나 3차암 진단비(원발암과 다른 암, 전이암 포함) 보장까지 고려하는 것이 중요합니다.</p>
+
+      <div class="box-info">
+        <h4>재발암 보장 유형별 차이</h4>
+        <p><strong>원발암 재발:</strong> 동일 부위의 암이 재발하는 경우. (일부 상품 보장 가능)</p>
+        <p><strong>전이암:</strong> 원발암이 다른 장기로 전이된 경우. (대부분의 유병자 보험에서 보장하며, 보장 한도에 차이 있음)</p>
+        <p><strong>2차암(다른 암):</strong> 원발암과 관계없이 새로운 암이 발생하는 경우. (보장 중요)</p>
+      </div>
+
+      <h3>유병자 보험 상품 선택 시 고려할 장단점</h3>
+
+      <h4>장점 (암 생존자를 위한 가입 문턱 완화)</h4>
+      <ul>
+        <li><strong>가입 편의성:</strong> 일반 보험 대비 심사 기준이 매우 완화되어, 암 진단 이력이 있어도 가입할 수 있습니다.</li>
+        <li><strong>재발암 대비:</strong> 재발, 전이암 보장을 포함하는 상품을 선택하여 미래 위험에 대비할 수 있습니다.</li>
+        <li><strong>폭넓은 보장:</strong> 암 진단 외에도 뇌혈관질환, 허혈성심장질환 등 주요 성인병에 대한 보장을 함께 설계할 수 있습니다.</li>
+      </ul>
+
+      <h4>단점 (일반 보험 대비 불리한 점)</h4>
+      <ul>
+        <li><strong>비싼 보험료:</strong> 건강한 사람 대비 위험률이 높게 책정되어, 일반 보험 대비 20~50% 정도 보험료가 비쌀 수 있습니다.</li>
+        <li><strong>면책 기간/감액 기간:</strong> 대부분의 유병자 보험은 가입 후 1년 이내에 진단받으면 보험금 지급이 안 되는 '면책 기간'이 있습니다. 또한 1년 이후 2년 이내에는 보험금의 50%만 지급하는 '감액 기간'이 적용되는 경우가 많습니다.</li>
+        <li><strong>환급금 없음:</strong> 보험료가 저렴한 무해지환급형 상품의 경우, 중도 해지 시 환급금이 전혀 없으므로 장기 유지가 필수입니다.</li>
+      </ul>
+      <a href="#quote-form-top" class="cta-button">나에게 맞는 장단점 분석: 전문 상담 신청</a>
+    </section>
+
+    <!-- Section 4: Cost Analysis -->
+    <section id="cost">
+      <h2>암진단 후 보험가입 예상 금액: 2026년 평균 보험료와 비용 절감 팁</h2>
+      <p>가장 궁금해하시는 부분 중 하나인 보험료(예상 금액)에 대해 자세히 살펴보겠습니다. 유병자 보험료는 일반 보험료와 달리 가입자의 연령, 성별, 고지하는 병력(암 종류, 완치 시점) 등에 따라 크게 달라집니다.</p>
+
+      <h3>2026년 기준 유병자 암보험 예상 평균 금액</h3>
+      <p>아래 표는 <strong>2026년 기준, 40세 남성/여성이 암 진단 후 3년이 지난 시점(325 고지 기준 통과)</strong>을 가정하여, 주요 보험사 상품들의 평균적인 월 보험료(예상 금액)를 비교한 것입니다. (보장 금액 2천만원 기준)</p>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>40세 남성 (월 예상 금액)</th>
+            <th>40세 여성 (월 예상 금액)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>무해지환급형 유병자 암보험</td>
+            <td>5만 원대 ~ 7만 원대</td>
+            <td>4만 원대 ~ 6만 원대</td>
+            <td>보험료가 가장 저렴한 싼곳</td>
+          </tr>
+          <tr>
+            <td>표준형 유병자 암보험 (환급금 O)</td>
+            <td>7만 원대 ~ 10만 원대</td>
+            <td>6만 원대 ~ 9만 원대</td>
+            <td>만기 환급금/해지환급금이 일부 있음</td>
+          </tr>
+          <tr>
+            <td>고혈압/당뇨 동반 가입 시</td>
+            <td>+1만 원 ~ +2만 원</td>
+            <td>+1만 원 ~ +2만 원</td>
+            <td>기저 질환이 있는 경우 할증</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>※ 위 금액은 평균적인 예상 수치이며, 실제 견적은 가입자의 세부 병력, 나이, 직업 등에 따라 달라집니다. 정확한 금액 확인을 위해 전문가 상담이 필수입니다.</p>
+
+      <h4>보험료를 저렴하게 가입하는 팁 (내돈내산 후기 기반)</h4>
+      <p>유병자 보험은 상품마다 보험료 차이가 크고, 특히 <strong>'무해지환급형'</strong> 상품을 선택하면 보험료를 크게 절감할 수 있습니다. 무해지환급형은 보험 중도 해지 시 환급금이 없지만, 납입 기간 동안의 보험료가 저렴하다는 장점이 있습니다. 장기간 유지할 계획이라면 이 방법을 추천합니다.</p>
+    </section>
+
+    <!-- Section 5: Trust and Verification -->
+    <section id="trust">
+      <h2>공신력 있는 외부 자료 및 정보 출처 (신뢰도 확보)</h2>
+      <p>암진단 후 보험가입은 복잡한 문제입니다. 정확한 정보를 얻기 위해 공인된 기관의 자료를 참고하는 것이 중요합니다. 아래는 보험 및 건강 관련 정보를 제공하는 신뢰할 수 있는 외부 사이트 목록입니다. (네이버 C-rank 향상)</p>
+      <div class="trust-section">
+        <ul>
+          <li><strong>금융감독원 금융소비자정보 포털 파인:</strong> <a href="https://fine.fss.or.kr" target="_blank">https://fine.fss.or.kr</a> (보험 상품 비교, 약관 등 확인)</li>
+          <li><strong>한국보험연구원:</strong> <a href="https://www.kiri.or.kr" target="_blank">https://www.kiri.or.kr</a> (보험 시장 동향 및 통계 자료)</li>
+          <li><strong>국민건강보험공단:</strong> <a href="https://www.nhis.or.kr" target="_blank">https://www.nhis.or.kr</a> (의료 기록 및 건강 정보 확인)</li>
+          <li><strong>나무위키(암보험):</strong> <a href="https://namu.wiki/w/%EC%95%94%EB%B3%B4%ED%97%98" target="_blank">https://namu.wiki/w/%EC%95%94%EB%B3%B4%ED%97%98</a> (일반적인 보험 상품 정의 및 정보)</li>
+          <li><strong>대한암학회:</strong> <a href="https://www.cancer.or.kr" target="_blank">https://www.cancer.or.kr</a> (암 치료 및 재발 관련 전문 정보)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ (Frequently Asked Questions) -->
+    <section id="faq">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-item">
+        <h3>Q1: 암진단 후 5년이 지나지 않았는데 가입할 수 있나요?</h3>
+        <p>A: 5년이 지나지 않았더라도 가입 가능한 상품이 있습니다. 다만 가입 조건(심사)이 까다롭거나, 해당 부위 암에 대해서 일정 기간 동안 '부담보'를 설정하는 조건으로 가입이 진행될 수 있습니다. 자세한 내용은 전문가 상담을 통해 확인해보셔야 합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q2: 유병자 보험은 일반 보험보다 비싼가요?</h3>
+        <p>A: 네, 건강 이력이 있는 만큼 일반 보험보다는 보험료가 높게 책정될 수 있습니다. 평균적으로 20~50% 정도 할증이 붙는 경우가 많습니다. 하지만 무해지환급형 상품을 선택하거나, 보장 범위를 최소화하여 보험료 부담을 줄이는 방법도 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q3: 고혈압이나 당뇨도 있는데 암보험 가입이 가능한가요?</h3>
+        <p>A: 네, 가능합니다. 유병자 보험은 고혈압이나 당뇨를 가진 분들도 가입할 수 있도록 설계된 상품입니다. 다만, 고혈압/당뇨 등의 기저 질환이 있는 경우 보험료가 할증될 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q4: 보험 가입 시 필요한 서류는 무엇인가요?</h3>
+        <p>A: 보험 가입 시에는 고지 의무 확인을 위해 진료기록지, 진단서, 소견서 등을 요청할 수 있습니다. 특히 암 진단 관련 서류는 보험사에서 필수적으로 요구합니다.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Q5: 암진단 후 재가입 시 면책 기간도 다시 적용되나요?</h3>
+        <p>A: 네, 유병자 보험에 신규 가입하는 경우 면책 기간과 감액 기간은 다시 적용됩니다. 이는 재가입이 아닌 신규 계약으로 간주되기 때문입니다. 따라서 가입 시 면책 기간을 정확히 확인하는 것이 중요합니다.</p>
+      </div>
+    </section>
+
+    <!-- Section 7: Final Call to Action and Contact -->
+    <section id="contact">
+      <h2>암진단 후 보험가입, 2026년 최적의 솔루션을 찾아보세요.</h2>
+      <p>복잡한 유병자 보험 상품을 혼자서 비교하고 분석하는 것은 쉽지 않습니다. 저희 전문 상담사가 가입자의 건강 상태와 재정 상황을 종합적으로 고려하여 최적의 상품을 추천해 드립니다. <strong>지금 바로 무료 견적을 받아보세요.</strong></p>
+
+      <!-- Engagement Form -->
+      <div class="form-box" id="quote-form-top">
+        <h3>무료 보험 견적/상담 요청 (체류시간 증가 유도)</h3>
+        <form action="/submit-quote" method="post">
+          <p>
+            <label for="name">이름</label><br>
+            <input type="text" id="name" name="name" placeholder="홍길동" required>
+          </p>
+          <p>
+            <label for="phone">연락처</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="010-XXXX-XXXX" required>
+          </p>
+          <p>
+            <label for="age">나이</label><br>
+            <input type="number" id="age" name="age" placeholder="만 40세" required>
+          </p>
+          <p>
+            <label for="disease_name">진단받은 질병 (예: 갑상선암, 위암)</label><br>
+            <input type="text" id="disease_name" name="disease_name" required>
+          </p>
+          <p>
+            <label for="diagnosis_date">진단일 (5년 이내/이상 여부 판단)</label><br>
+            <input type="date" id="diagnosis_date" name="diagnosis_date" required>
+          </p>
+          <p>
+            <label for="treatment_status">현재 치료 상태 (예: 완치 후 추적 관찰 중)</label><br>
+            <select id="treatment_status" name="treatment_status" required>
+              <option value="">-- 선택 --</option>
+              <option value="완치_추적">완치 후 추적 관찰 중</option>
+              <option value="치료중">현재 치료 중</option>
+              <option value="5년미경과">진단 후 5년 미경과</option>
+              <option value="5년경과">진단 후 5년 경과</option>
+            </select>
+          </p>
+          <p>
+            <label for="desired_coverage">희망 보장 내용</label><br>
+            <textarea id="desired_coverage" name="desired_coverage" rows="3" placeholder="재발암 보장, 실비보험 가입 등 구체적으로 기재해주세요." required></textarea>
+          </p>
+          <button type="submit" class="cta-button">무료 견적 요청하기</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Dwell Time Enhancement: Additional Form Section -->
+    <section>
+      <h2>심층 상담 예약: 나만을 위한 맞춤형 플랜 제안</h2>
+      <p>단순 견적 외에도, 현재 나의 건강 상태와 재정 상황을 종합적으로 분석하여 최적화된 보험 포트폴리오를 설계해 드립니다. 특히 <strong>재발 위험이 높은 암종이거나 2차암 보장이 필요한 경우</strong>, 전문 상담사와 1:1 심층 상담을 통해 최적의 <strong>장단점을 파악한 상품</strong>을 추천받을 수 있습니다.</p>
+      <div class="form-box">
+        <h3>1:1 맞춤형 플랜 신청</h3>
+        <form action="/submit-custom-plan" method="post">
+          <p>
+            <label for="plan_name">이름</label><br>
+            <input type="text" id="plan_name" name="plan_name" required>
+          </p>
+          <p>
+            <label for="plan_phone">연락처</label><br>
+            <input type="tel" id="plan_phone" name="plan_phone" required>
+          </p>
+          <p>
+            <label for="plan_consult_type">상담 희망 유형</label><br>
+            <select id="plan_consult_type" name="plan_consult_type" required>
+              <option value="">-- 선택 --</option>
+              <option value="암진단후_보험가입">암진단 후 보험가입</option>
+              <option value="유병자_실비보험">유병자 실비보험</option>
+              <option value="간편심사_통합보험">간편심사 통합보험</option>
+            </select>
+          </p>
+          <button type="submit" class="cta-button">심층 상담 예약하기</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+ 
+
+  
